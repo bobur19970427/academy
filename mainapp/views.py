@@ -15,6 +15,10 @@ def NewsPageView(request):
     posts = Post.objects
     return render(request, 'news.html', {'posts': posts})
 
+class LoginPageView(TemplateView):
+    template_name = 'login.html'
+
+
 
 # class NewsPageView(TemplateView):
 #     posts = Post.objects

@@ -5,7 +5,6 @@ urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path('about/', AbautPageView.as_view(), name='about'),
     path('news/', NewsPageView, name='news'),
-    path('login/', LoginPageView.as_view(), name='login'),
     path('registration/', RegistrationPageView.as_view(), name='registration'),
     path('<int:post_id>/', News_viewPageView, name='news_view'),
 ]

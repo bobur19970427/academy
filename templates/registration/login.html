@@ -52,15 +52,16 @@
                             </div>
                         </div>
                         <div class="form-bottom">
-                            <form role="form" action="" class="login-form">
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-unlock"></i></span>
-                                    <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                                </div>
+                            <form role="form" action="" class="login-form" method="post">{% csrf_token %}
+                                {{ form.as_p }}
+<!--                                <div class="input-group form-group">-->
+<!--                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>-->
+<!--                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">-->
+<!--                                </div>-->
+<!--                                <div class="input-group form-group">-->
+<!--                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-unlock"></i></span>-->
+<!--                                    <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">-->
+<!--                                </div>-->
                                 <button type="submit" class="btn">Sign in!</button>
                             </form>
                         </div>
@@ -82,6 +83,7 @@
                     </div>
 
                 </div>
-
+            </div>
+        </div>
     </section>
 {% endblock %}

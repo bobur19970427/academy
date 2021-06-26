@@ -16,7 +16,7 @@ def NewsPageView(request):
     return render(request, 'news.html', {'posts': posts})
 
 class LoginPageView(TemplateView):
-    template_name = 'login.html'
+    template_name = 'registration/login.html'
 
 class RegistrationPageView(TemplateView):
     template_name = 'registration.html'

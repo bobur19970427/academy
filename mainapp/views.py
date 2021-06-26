@@ -9,3 +9,6 @@ class HomePageView(TemplateView):
 
 class AbautPageView(TemplateView):
     template_name = 'about.html'
+
+class NewsPageView(TemplateView):
+    template_name = 'news.html'

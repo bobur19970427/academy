@@ -49,7 +49,7 @@
                         </div>
                         <!-- End portfolio-head -->
                         <div class="portfolio-content">
-                            <h5 class="title">{{post.title}}</h5>
+                            <h5 class="title"><a href="{% url 'news_view' post.id %}">{{post.title}}</a></h5>
                             <p>{{post.text}}</p>
                             <p>{{post.date}}</p>
                         </div>
@@ -59,137 +59,6 @@
                 </div>
                 {% endfor %}
             </div>
-
-<!--            <div class="row">-->
-<!--                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">-->
-<!--                    <div class="portfolio-one">-->
-<!--                        <div class="portfolio-head">-->
-<!--                            <div class="portfolio-img"><img alt="" src="{% static 'img/portfolio-1.jpg' %}"></div>-->
-<!--                            <div class="portfolio-hover">-->
-<!--                                <a class="portfolio-link" href="#"><i class="fa fa-link"></i></a>-->
-<!--                                <a class="portfolio-zoom" href="#"><i class="fa fa-search"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-head &ndash;&gt;-->
-<!--                        <div class="portfolio-content">-->
-<!--                            <h5 class="title">Lorem Ipsum</h5>-->
-<!--                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-content &ndash;&gt;-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; End portfolio-item &ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">-->
-<!--                    <div class="portfolio-one">-->
-<!--                        <div class="portfolio-head">-->
-<!--                            <div class="portfolio-img"><img alt="" src="{% static 'img/portfolio-1.jpg' %}"></div>-->
-<!--                            <div class="portfolio-hover">-->
-<!--                                <a class="portfolio-link" href="#"><i class="fa fa-link"></i></a>-->
-<!--                                <a class="portfolio-zoom prettyPhoto" href="#"><i class="fa fa-search"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-head &ndash;&gt;-->
-<!--                        <div class="portfolio-content">-->
-<!--                            <h5 class="title">Lorem Ipsum</h5>-->
-<!--                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-content &ndash;&gt;-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; End portfolio-item &ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">-->
-<!--                    <div class="portfolio-one">-->
-<!--                        <div class="portfolio-head">-->
-<!--                            <div class="portfolio-img"><img alt="" src="{% static 'img/portfolio-1.jpg' %}"></div>-->
-<!--                            <div class="portfolio-hover">-->
-<!--                                <a class="portfolio-link" href="#"><i class="fa fa-link"></i></a>-->
-<!--                                <a class="portfolio-zoom prettyPhoto" href="#"><i class="fa fa-search"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-head &ndash;&gt;-->
-<!--                        <div class="portfolio-content">-->
-<!--                            <h5 class="title">Lorem Ipsum</h5>-->
-<!--                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-content &ndash;&gt;-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; End portfolio-item &ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">-->
-<!--                    <div class="portfolio-one">-->
-<!--                        <div class="portfolio-head">-->
-<!--                            <div class="portfolio-img"><img alt="" src="{% static 'img/portfolio-1.jpg' %}"></div>-->
-<!--                            <div class="portfolio-hover">-->
-<!--                                <a class="portfolio-link" href="#"><i class="fa fa-link"></i></a>-->
-<!--                                <a class="portfolio-zoom" href="#"><i class="fa fa-search"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-head &ndash;&gt;-->
-<!--                        <div class="portfolio-content">-->
-<!--                            <h5 class="title">Lorem Ipsum</h5>-->
-<!--                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-content &ndash;&gt;-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; End portfolio-item &ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">-->
-<!--                    <div class="portfolio-one">-->
-<!--                        <div class="portfolio-head">-->
-<!--                            <div class="portfolio-img"><img alt="" src="{% static 'img/portfolio-1.jpg' %}"></div>-->
-<!--                            <div class="portfolio-hover">-->
-<!--                                <a class="portfolio-link" href="#"><i class="fa fa-link"></i></a>-->
-<!--                                <a class="portfolio-zoom prettyPhoto" href="#"><i class="fa fa-search"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-head &ndash;&gt;-->
-<!--                        <div class="portfolio-content">-->
-<!--                            <h5 class="title">Lorem Ipsum</h5>-->
-<!--                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-content &ndash;&gt;-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; End portfolio-item &ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">-->
-<!--                    <div class="portfolio-one">-->
-<!--                        <div class="portfolio-head">-->
-<!--                            <div class="portfolio-img"><img alt="" src="{% static 'img/portfolio-1.jpg' %}"></div>-->
-<!--                            <div class="portfolio-hover">-->
-<!--                                <a class="portfolio-link" href="#"><i class="fa fa-link"></i></a>-->
-<!--                                <a class="portfolio-zoom prettyPhoto" href="#"><i class="fa fa-search"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-head &ndash;&gt;-->
-<!--                        <div class="portfolio-content">-->
-<!--                            <h5 class="title">Lorem Ipsum</h5>-->
-<!--                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End portfolio-content &ndash;&gt;-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; End portfolio-item &ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="col-md-12 col-sm-12 col-xs-12">-->
-<!--                    <nav aria-label="Page navigation example">-->
-<!--                        <ul class="pagination pagination-lg justify-content-end">-->
-<!--                            <li class="page-item">-->
-<!--                                <a class="page-link" href="#" tabindex="-1">Previous</a>-->
-<!--                            </li>-->
-<!--                            <li class="page-item"><a class="page-link" href="#">1</a></li>-->
-<!--                            <li class="page-item"><a class="page-link" href="#">2</a></li>-->
-<!--                            <li class="page-item"><a class="page-link" href="#">3</a></li>-->
-<!--                            <li class="page-item">-->
-<!--                                <a class="page-link" href="#">Next</a>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </nav>-->
-
-<!--                </div>-->
-<!--            </div>-->
 
         </div>
 

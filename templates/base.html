@@ -36,7 +36,7 @@
                     </div>
                     <div id="navbar" class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="{% url 'home' %}">Bosh sahifa</a></li>
+                            <li ><a href="{% url 'home' %}">Bosh sahifa</a></li>
 <!--                            <li><a href="features.html">Features</a></li>-->
                             <li><a href="{% url 'about' %}">Biz haqimizda</a></li>
                             <li><a href="{% url 'news' %}">Yangiliklar</a></li>
@@ -46,8 +46,9 @@
                             <li><a href="{% url 'logout' %}">{{user.username}}|<span class="background-color:'blue'">LogOut</span></a></li>
                             {% else %}
                             <li><a href="{% url 'login' %}">kirish</a></li>
-                            {% endif %}
                             <li><a href="{% url 'registration' %}">A'zo bo'lish</a></li>
+                            {% endif %}
+
                         </ul>
                     </div>
                     <!--/.nav-collapse -->

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'mainapp',
     'accounts',
     'crispy_forms',
-    'profileapp'
+    'profileapp',
+    'simple_pagination'
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'academy',
         'USER': 'root',
-        'PASSWORD': '1813',
+        'PASSWORD': 'webshox',
         'HOST': 'localhost',
         'PORT': 3306
     }

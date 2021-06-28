@@ -43,7 +43,12 @@
 <!--                            <li><a href="faq.html">FAQ</a></li>-->
                             <li><a href="contact.html">Contact</a></li>
                             {% if user.is_authenticated %}
-                            <li><a href="{% url 'logout' %}">{{user.username}}|<span class="background-color:'blue'">LogOut</span></a></li>
+                            {% if user.is_superuser %}
+                            <li><a href="{% url 'profile' %}"><span class="background-color:'blue'">{{user.username}}</span></a></li>
+                            {% else %}
+                            <li><a href="#"><span class="background-color:'blue'">{{user.username}}</span></a></li>
+                            {% endif %}
+                            <li><a href="{% url 'logout' %}"><span class="background-color:'blue'">LogOut</span></a></li>
                             {% else %}
                             <li><a href="{% url 'login' %}">kirish</a></li>
                             <li><a href="{% url 'registration' %}">A'zo bo'lish</a></li>

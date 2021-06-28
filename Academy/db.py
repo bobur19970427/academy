@@ -3,7 +3,7 @@ import mysql.connector as mysql
 db = mysql.connect(
     host = "localhost",
     user = "root",
-    passwd = "1813",
+    passwd = "webshox",
     port = 3306
 )
 cursor = db.cursor()

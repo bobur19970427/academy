@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'mainapp',
     'accounts',
     'crispy_forms',
-    'profileapp'
+    'profileapp',
+
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,5 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+AUTH_USER_MODEL = 'accounts.CustomUser'

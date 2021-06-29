@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'crispy_forms',
     'profileapp',
-
+    'simple_pagination'
 ]
 
 MIDDLEWARE = [
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'Academy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'academy',
+        'NAME': 'academy1',
         'USER': 'root',
         'PASSWORD': '1813',
         'HOST': 'localhost',

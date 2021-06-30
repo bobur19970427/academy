@@ -1,6 +1,5 @@
 {% extends 'profile/base.html' %}
 {% load static %}
-{% lorem 5 %}
 {% load  %}
 {% block content %}
 
@@ -222,7 +221,7 @@
                     <div class="row">
 
                         <!-- Area Chart -->
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-12 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
@@ -231,58 +230,43 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <img class="rounded mx-auto d-block" style="width: 250px; height: 250px"
-                                        src="../../media/{{user.image}}">
-                                        <br>
-                                        <br>
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                            <th scope="col"><b>Foydalanuvchi taxallusi</b></th>
-                                            <th scope="col">{{user.username}}</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                            <th scope="row">Foydalanuvchi Ismi</th>
-                                            <td>{{user.first_name}}</td>
-                                            </tr>
-                                            <tr>
-                                            <th scope="row">Foydalanuvchi Familyasi</th>
-                                            <td>{{user.last_name}}</td>
-                                            </tr>
-                                            <tr>
-                                            <th scope="row">Foydalanuvchi Emaili</th>
-                                            <td>{{user.email}}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                <a class="btn btn-primary" href="{% url 'edit' %}">Profilni Sozlash</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xl-6 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Foydalanuvchi ma'lumotlari</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <h1>lorem Ipsum</h1>
-                                    <p>{% lorem 2 %}</p>
+                                    <form>
+                                        <div class="form-group">
+                                        <label for="exampleFormControlInput1">Username</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Ism</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Familya</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Example select</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                        </form>
                                 </div>
                             </div>
                         </div>
 
                 </div>
-
-
-                </div>
-                
                 <!-- /.container-fluid -->
 
             </div>

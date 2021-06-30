@@ -229,39 +229,32 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Foydalanuvchi ma'lumotlari</h6>
                                 </div>
                                 <!-- Card Body -->
+                            
                                 <div class="card-body">
-                                    <form>
+                                    <form action="{% url 'update' user.id %}" method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
                                         <div class="form-group">
                                         <label for="exampleFormControlInput1">Username</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" value="">
+                                            <input type="text" class="form-control" name="username" value="{{user.username}}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Ism</label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            <input type="text" class="form-control" name="first_name" id="exampleFormControlInput1" value="{{user.first_name}}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Familya</label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            <input type="text" class="form-control" name="last_name" id="exampleFormControlInput1" value="{{user.last_name}}">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            <input type="text" class="form-control" name="email" id="exampleFormControlInput1" value="{{user.email}}">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlSelect1">Example select</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            </select>
+                                            <label for="exampleFormControlFile1">Example file input</label>
+                                            <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="exampleFormControlTextarea1">Example textarea</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                        </div>
-                                        </form>
+                                        <input type="submit" value="Saqlash" class="btn btn-success">
+                                    </form>
                                 </div>
                             </div>
                         </div>

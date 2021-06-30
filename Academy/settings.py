@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'academy1',
         'USER': 'root',
-        'PASSWORD': '1813',
+        'PASSWORD': 'webshox',
         'HOST': 'localhost',
         'PORT': 3306
     }

@@ -14,7 +14,7 @@ ul = soup.find('ul', id='fakvakaf_menu')
 fak = ul.find_all('li', class_='menu-item-has-children')
 for fak_nomi in fak:
     fak_nomi = fak_nomi.find('a').text
-    a = (fak_nomi, 'yusupov')
+    a = (fak_nomi, 'null')
     product.append(a)
 
 db = mysql.connector.connect(

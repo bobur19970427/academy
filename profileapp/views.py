@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+from django.shortcuts import get_list_or_404, get_object_or_404
 from django.views.generic import TemplateView
 from accounts.models import CustomUser
+from .forms import CustomUserChangeForm
 
 class UserProfieleView(TemplateView):
     template_name = 'profile/index.html'
@@ -12,9 +14,9 @@ class UserProfieleView(TemplateView):
 #     template_name = 'profile/users.html'
 
 
-def EditProfieleView(request):
-    user = CustomUser.objects.all()
-    return render(request, 'profile/update.html', { 'user': user })
+# def EditProfieleView(request):
+#     user = CustomUser.objects.all()
+#     return render(request, 'profile/update.html', { 'user': user })
     
 def UsersTableView(request):
     user_list = CustomUser.objects.all()

@@ -232,7 +232,7 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <img class="rounded mx-auto d-block" style="width: 250px; height: 250px"
-                                        src="../../media/{{user.image}}">
+                                        src="{{user.image.url}}">
                                         <br>
                                         <br>
                                     <table class="table">
@@ -257,7 +257,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                <a class="btn btn-primary" href="{% url 'edit' %}">Profilni Sozlash</a>
+                                <a class="btn btn-primary" href="{% url 'edit' user.id %}">Profilni Sozlash</a>
                                 </div>
                             </div>
                         </div>

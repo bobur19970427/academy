@@ -30,6 +30,7 @@ def UsersTableView(request):
 
     return render(request, 'profile/users.html', { 'users': users })
 
-    
-    
+class AzobolishPageView(TemplateView):
+    template_name = 'profile/azobolish.html'
+
 

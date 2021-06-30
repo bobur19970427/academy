@@ -7,6 +7,7 @@ class Post(models.Model):
 	text = models.TextField()
 	image = models.ImageField(upload_to='media/event_images/')
 
+
 	def __str__(self):
 		return self.title
 

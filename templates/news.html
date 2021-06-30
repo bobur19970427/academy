@@ -6,7 +6,7 @@
     <section id="top_banner">
         <div class="banner">
             <div class="inner text-center">
-                <h2>Lorem ipsum dolor sit amet</h2>
+                <h2>Yangiliklarni kuzatib boring</h2>
             </div>
         </div>
         <div class="page_info">
@@ -50,7 +50,7 @@
                         <!-- End portfolio-head -->
                         <div class="portfolio-content">
                             <h5 class="title"><a href="{% url 'news_view' post.id %}">{{post.title}}</a></h5>
-                            <p>{{post.text}}</p>
+                            <p>{{post.text|slice:":100"}}</p>
                             <p>{{post.date}}</p>
                         </div>
                         <!-- End portfolio-content -->

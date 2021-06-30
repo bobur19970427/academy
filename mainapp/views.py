@@ -21,6 +21,9 @@ class LoginPageView(TemplateView):
 class RegistrationPageView(TemplateView):
     template_name = 'registration.html'
 
+class TanlovlarPageView(TemplateView):
+    template_name = 'tanlovlar.html'
+
 def News_viewPageView(request, post_id):
     post = get_object_or_404(Post,pk=post_id)
     return render(request, 'news_view.html', {'post': post})

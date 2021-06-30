@@ -41,7 +41,7 @@
                             <li><a href="{% url 'about' %}">Biz haqimizda</a></li>
                             <li><a href="{% url 'news' %}">Yangiliklar</a></li>
 <!--                            <li><a href="faq.html">FAQ</a></li>-->
-                            <li><a href="contact.html">Tanlovlar</a></li>
+                            <li><a href="{% url 'tanlovlar' %}">Tanlovlar</a></li>
                             {% if user.is_authenticated %}
                             {% if user.is_superuser %}
                             <li><a href="{% url 'profile' %}"><span class="background-color:'blue'">{{user.username}}</span></a></li>
@@ -76,58 +76,60 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <h4>Address</h4>
+                        <h4>Manzil</h4>
 
                         <hr/>
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.
-                        </p>
-                        <a href="#" class="learnmore">Learn More <i class="fa fa-caret-right"></i></a>
+                        <p>Jizzax davlat pedagogika instituti,
+                            <br>130100 Jizzax viloyati,
+                            <br>Jizzax shahri <br>
+                            Sh.Rashidov shox ko'chasi, 4 uy</p>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <h4>Useful Links</h4>
+                        <h4>Biz bilan bog'lanish</h4>
                         <hr/>
                         <ul class="footer-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i> talabalar.akademiyasi</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a> talabalar.akademiyasi</li>
+<!--                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a> talabalar.akademiyasi</li>
+                            <li><a href="#"><i class="fa fa-skype"></i></a> talabalar.akademiyasi</li>
+
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <h4>Community</h4>
+                        <h4>Yo'nalishlar</h4>
                         <hr/>
                         <ul class="footer-links">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Free Goods</a></li>
+                            <li><a href="#">G'OYALAR GENERATORI</a></li>
+                            <li><a href="#">STARTAPLAR</a></li>
+                            <li><a href="#">BIZNES VAKILLARI</a></li>
+                            <li><a href="#">BO'LAJAK AKADEMIKLAR</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 <block></block>">
                     <div class="footer-block">
-                        <h4>Recent Posts</h4>
+                        <h4>OXIRGI YANGILIKLAR</h4>
                         <hr/>
                         <ul class="footer-links">
                             <li>
                                 <a href="#" class="post">Lorem ipsum dolor sit amet</a>
-                                <p class="post-date">May 25, 2017</p>
+                                <p class="post-date">May 25, 2021</p>
                             </li>
                             <li>
                                 <a href="#" class="post">Lorem ipsum dolor sit amet</a>
-                                <p class="post-date">May 25, 2017</p>
+                                <p class="post-date">May 25, 2021</p>
                             </li>
                             <li>
                                 <a href="#" class="post">Lorem ipsum dolor sit amet</a>
-                                <p class="post-date">May 25, 2017</p>
+                                <p class="post-date">May 25, 2021</p>
                             </li>
 
                         </ul>
@@ -146,8 +148,8 @@
             <div class="row">
                 <div class="col-md-7 col-sm-7 col-xs-7 top-header-links">
                     <ul class="contact_links">
-                        <li><i class="fa fa-phone"></i><a href="#">+91 848 594 5080</a></li>
-                        <li><i class="fa fa-envelope"></i><a href="#">sales@aspiresoftware.in</a></li>
+                        <li><i class="fa fa-phone"></i><a href="#">+998 99 899 88 99</a></li>
+                        <li><i class="fa fa-envelope"></i><a href="#">talabalarakademiyasi@mail.ru</a></li>
                     </ul>
                 </div>
                 <div class="col-md-5 col-sm-5 col-xs-5 social">

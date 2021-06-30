@@ -10,7 +10,11 @@ class UserProfieleView(TemplateView):
 # class UsersTableView(TemplateView):
 #     users = User.objects
 #     template_name = 'profile/users.html'
-    
+
+
+def EditProfieleView(request):
+    user = CustomUser.objects.all()
+    return render(request, 'profile/update.html', { 'user': user })
     
 def UsersTableView(request):
     user_list = CustomUser.objects.all()

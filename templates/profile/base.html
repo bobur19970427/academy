@@ -35,7 +35,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'profile' %}">
                 <img class="img-profile rounded-circle" style="width: 60px; height: 60px"
-                    src="../../media/{{user.image}}">
+                    src="{{ user.image.url }}">
                 <div class="sidebar-brand-text mx-3">{{user.username}}</div>
             </a>
 
@@ -155,10 +155,16 @@
 
         {% endblock content %}
 
-
-        </div>
+        <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
+        <!-- End of Footer -->
         <!-- End of Content Wrapper -->
-
     </div>
     <!-- End of Page Wrapper -->
 
@@ -186,15 +192,6 @@
             </div>
         </div>
     </div>
-<!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
     <!-- Bootstrap core JavaScript-->
     <script src="{% static 'profile/vendor/jquery/jquery.min.js' %}"></script>

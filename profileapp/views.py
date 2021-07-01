@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http.response import HttpResponse
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.shortcuts import get_list_or_404, get_object_or_404

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'reset_migrations',
     'mainapp',
     'accounts',
     'crispy_forms',
@@ -83,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'academy1',
         'USER': 'root',
-        'PASSWORD': '1813',
+        'PASSWORD': 'webshox',
         'HOST': 'localhost',
         'PORT': 3306
     }

@@ -43,11 +43,7 @@
 <!--                            <li><a href="faq.html">FAQ</a></li>-->
                             <li><a href="{% url 'tanlovlar' %}">Tanlovlar</a></li>
                             {% if user.is_authenticated %}
-                            {% if user.is_superuser %}
                             <li><a href="{% url 'profile' %}"><span class="background-color:'blue'">{{user.username}}</span></a></li>
-                            {% else %}
-                            <li><a href="#"><span class="background-color:'blue'">{{user.username}}</span></a></li>
-                            {% endif %}
                             <li><a href="{% url 'logout' %}"><span class="background-color:'blue'">LogOut</span></a></li>
                             {% else %}
                             <li><a href="{% url 'login' %}">kirish</a></li>

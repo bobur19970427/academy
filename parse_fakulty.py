@@ -20,11 +20,12 @@ for fak_nomi in fak:
 db = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="1813",
+        password="webshox",
         database='academy1'
     )
 mycursor = db.cursor()
-mycursor.execute("CREATE TABLE IF NOT EXISTS fakultet2 (id INT(50) NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), dek VARCHAR(255))")
-sql = "INSERT INTO fakultet2 (name, dek) VALUES (%s,%s)"
+mycursor.execute("CREATE TABLE IF NOT EXISTS accounts_fakulty (id INT(50) NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), dek VARCHAR(255))")
+mycursor.execute("ALTER TABLE academy1.accounts_fakulty CONVERT TO CHARACTER SET utf8")
+sql = "INSERT INTO accounts_fakulty (name, dek) VALUES (%s,%s)"
 mycursor.executemany(sql, product)
 db.commit()

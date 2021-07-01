@@ -250,6 +250,25 @@
                                             <input type="text" class="form-control" name="email" id="exampleFormControlInput1" value="{{user.email}}">
                                         </div>
                                         <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Fakultet</label>
+                                            <select class="form-control" id="exampleFormControlSelect1" value="" name='fakulty'>
+                                            {% for fakulty in fakultys %}
+                                                <option value={{fakulty.id}}>{{fakulty.name}}</option>
+                                            {% endfor %}
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Yunalishlar</label>
+                                            <select class="form-control" id="exampleFormControlSelect1" value="" name='yunalish'>
+                                            {% for yunalish in yunalishlar %}
+                                                <option value={{yunalish.id}}>{{yunalish.name}}</option>
+                                            {% endfor %}
+                                            </select>
+                                        </div>
+
+
+                                        <div class="form-group">
                                             <label for="exampleFormControlFile1">Example file input</label>
                                             <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
                                         </div>

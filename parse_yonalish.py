@@ -21,16 +21,16 @@ for fak_nomi in fak:
         yu_nomi = yunalish.find('a').text
         a = (yu_nomi,s)
         product.append(a)
-print(product)
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="1813",
+    password="webshox",
     database='academy1'
 )
 mycursor = db.cursor()
 mycursor.execute(
-    "CREATE TABLE IF NOT EXISTS yunalish (id INT(50) NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), fak_id INT(50))")
-sql = "INSERT INTO yunalish (name, fak_id) VALUES (%s,%s)"
+    "CREATE TABLE IF NOT EXISTS accounts_yunalish (id INT(50) NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), fakultet_id INT(50))")
+mycursor.execute("ALTER TABLE academy1.accounts_yunalish CONVERT TO CHARACTER SET utf8")
+sql = "INSERT INTO accounts_yunalish (name, fakultet_id) VALUES (%s,%s)"
 mycursor.executemany(sql, product)
 db.commit()

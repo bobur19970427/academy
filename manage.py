@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import mysql.connector as mysql
+# import mysql.connector as mysql
 
 def main():
     """Run administrative tasks."""

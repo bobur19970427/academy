@@ -30,7 +30,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'profile' %}">
@@ -44,7 +44,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{% url 'profile' %}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Boshqaruv paneli</span></a>
             </li>
@@ -127,18 +127,21 @@
             </li>
 
             <!-- Nav Item - Charts -->
+            {% if user.is_superuser == 0 %}
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'azobolish' %}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>A'zo bolish</span></a>
             </li>
-
+            {% endif %}
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'users' %}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Jadvallar</span></a>
-            </li>
+            {% if user.is_superuser %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users' %}">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Foydalanuvchilar</span></a>
+                </li>
+            {% endif %}
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -156,17 +159,6 @@
         {% endblock content %}
 
 
-
-<!-- Footer -->
-
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -209,7 +201,7 @@
     <!-- Page level custom scripts -->
     <script src="{% static 'profile/js/demo/chart-area-demo.js' %}"></script>
     <script src="{% static 'profile/js/demo/chart-pie-demo.js' %}"></script>
-
+    </div>
 </body>
 
 </html>

@@ -23,7 +23,7 @@ def UsersTableView(request):
     user_list = CustomUser.objects.all()
     page = request.GET.get('page', 1)
 
-    paginator = Paginator(user_list, 2)
+    paginator = Paginator(user_list, 10)
     try:
         users = paginator.page(page)
     except PageNotAnInteger:

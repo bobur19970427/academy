@@ -230,7 +230,7 @@
                                 </div>
                                 <!-- Card Body -->
                             
-                                <div class="card-body">
+                                <div class="card-body text-primary">
                                     <form action="{% url 'update' user.id %}" method="POST" enctype="multipart/form-data">
                                         {% csrf_token %}
                                         <div class="form-group">
@@ -250,6 +250,27 @@
                                             <input type="text" class="form-control" name="email" id="exampleFormControlInput1" value="{{user.email}}">
                                         </div>
                                         <div class="form-group">
+                                            <label for="fakultetId">Fakultet</label>
+                                            <select class="form-control" id="fakultetId" value="" name='fakulty' onchange="myFunction()">
+                                            {% for fakulty in fakultys %}
+                                                <option value={{fakulty.id}}>{{fakulty.name}}{{fakulty.id}}</option>
+                                            {% endfor %}
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="yunalishId">Yunalishlar</label>
+                                            <select class="form-control" id="yunalishId" value="" name='yunalish'>
+
+                                            {% for yunalish in yunalishlar %}
+                                                    <option id="optiony" value="">{{yunalish.name}}</option>
+
+                                            {% endfor %}
+                                            </select>
+                                        </div>
+
+
+                                        <div class="form-group">
                                             <label for="exampleFormControlFile1">Example file input</label>
                                             <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
                                         </div>
@@ -263,5 +284,13 @@
                 <!-- /.container-fluid -->
 
             </div>
+                <script>
+                    function myFunction() {
+                      var x = document.getElementById("fakultetId").value;
+                       console.log(document.getElementById('optiony').value = x);
+                    }
+
+
+                </script>
             <!-- End of Main Content -->
 {% endblock content %}

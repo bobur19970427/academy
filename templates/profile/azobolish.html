@@ -3,50 +3,37 @@
 {% block content %}
 <div class="card-body">
 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-    <h6 class="m-0 font-weight-bold text-primary">Foydalanuvchi ma'lumotlari</h6>
+    <h6 class="m-0 font-weight-bold text-primary">JDPI talabalar akademiyasiga a'zo bo'lish uchun a'riza jo'nating</h6>
 </div>
 <!-- Card Body -->
-<div class="card-body">
-    <form>
+<div class="card-body text-primary">
+    <div class="py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="font-weight-bold">JDPI talabalar akademiyasiga yo'nalishlardan tanlang</h6>
+    </div>
+    <form action="">
+
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Fakultet</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-            <option>Matematika va informatika fakulteti</option>
-            <option>Tabiiy fanlar</option>
-            <option>O’zbek tili va adabiyoti</option>
-            <option>Boshlang‘ich ta’lim</option>
-            <option>Tarix</option>
-            <option>Fizika va texnologiya ta’limi</option>
-            <option>Chet tillar</option>
-            <option>Rus tili va adabiyoti fakulteti</option>
-            <option>Jismoniy  madaniyat</option>
-            </select>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> G'OYALAR GENERATORI</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> STARTAPLAR</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> BIZNES VAKILLARI</label><br>
+            <input type="checkbox" id="vehicle4" name="vehicle4" value="Boats">
+            <label for="vehicle4"> BO'LAJAK AKADEMIKLAR</label><br><br>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Yo'nalish</label>
-            <select class="form-control" id="exampleFormControlSelect2">
-            <option>Matematika va informatika fakulteti</option>
-            <option>Tabiiy fanlar</option>
-            <option>O’zbek tili va adabiyoti</option>
-            <option>Boshlang‘ich ta’lim</option>
-            <option>Tarix</option>
-            <option>Fizika va texnologiya ta’limi</option>
-            <option>Chet tillar</option>
-            <option>Rus tili va adabiyoti fakulteti</option>
-            <option>Jismoniy  madaniyat</option>
-            </select>
-        </div>
-        <div class="form-group">
-        <label for="exampleFormControlInput1">Guruh</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" value="">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <label for="exampleFormControlTextarea1">G'oya va takliflaringizni kiriting</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="myfile">G'oya va takliflaringizni prezintatsiya shaklda jo'nating:</label><br>
+            <input type="file" id="myfile" name="myfile">
         </div>
         <div class="form-group">
              <input type="button" class="btn btn-success" id="exampleFormControlSubmit1" value="A'riza jo'natish">
         </div>
         </form>
+</div>
 </div>
 {% endblock content %}
